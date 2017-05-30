@@ -619,8 +619,12 @@ ngFileUpload.service('Upload', ['$parse', '$timeout', '$compile', '$q', 'UploadE
         if (validateAfterResize) {
           upload.validate(allNewFiles, keep ? prevValidFiles.length : 0, ngModel, attr, scope)
             .then(function (validationResult) {
-              valids = validationResult.validFiles;
-              invalids = validationResult.invalidFiles;
+              if (!options || !options.allowInvalid) {
+                  valids = validationResult.validFiles;
+                  invalids = validationResult.invalidFiles;
+              } else {
+                  valids = allNewFiles;
+              }
               updateModel();
             });
         } else {
