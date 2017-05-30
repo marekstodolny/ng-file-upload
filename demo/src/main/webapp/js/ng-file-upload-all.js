@@ -1032,7 +1032,7 @@ ngFileUpload.service('Upload', ['$parse', '$timeout', '$compile', '$q', 'UploadE
         $timeout(function () {
           update(keep ? prevValidFiles.concat(valids) : valids,
             keep ? prevInvalidFiles.concat(invalids) : invalids,
-            files, dupFiles, isSingleModel);
+            allNewFiles, dupFiles, isSingleModel);
         }, options && options.debounce ? options.debounce.change || options.debounce : 0);
       }
 
@@ -1097,7 +1097,7 @@ ngFileUpload.service('Upload', ['$parse', '$timeout', '$compile', '$q', 'UploadE
     upload.validate(allNewFiles, keep ? prevValidFiles.length : 0, ngModel, attr, scope)
       .then(function (validationResult) {
       if (noDelay) {
-        update(allNewFiles, [], files, dupFiles, isSingleModel);
+        update(files, [], allNewFiles, dupFiles, isSingleModel);
       } else {
         if ((!options || !options.allowInvalid) && !validateAfterResize) {
           valids = validationResult.validFiles;
