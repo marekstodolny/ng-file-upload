@@ -1,6 +1,6 @@
 {
   "name": "ng-file-upload",
-  "version": "12.2.13",
+  "version": "12.2.14",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danialfarid/ng-file-upload.git"
+    "url": "https://github.com/marekstodolny/ng-file-upload.git"
   },
   "keywords": [
     "angularjs",
@@ -36,7 +36,7 @@
   "author": "danial.farid@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danialfarid/ng-file-upload/issues"
+    "url": "https://github.com/marekstodolny/ng-file-upload/issues"
   },
-  "homepage": "https://github.com/danialfarid/ng-file-upload"
+  "homepage": "https://github.com/marekstodolny/ng-file-upload"
 }
